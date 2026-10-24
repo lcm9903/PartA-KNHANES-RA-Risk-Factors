@@ -108,28 +108,6 @@ ROC·PR 곡선은 `roc_pr.png`, SHAP 요약 그림은 `shap_summary.png`에 저�
 - **CRP 하한 대치**: 0.15 mg/L 미만을 0.075로 둔 선택에 대한 민감도 분석이 필요합니다.
 - **SHAP 값**은 모델 예측에 대한 기여도이지 인과 효과가 아닙니다.
 
-## 6. 다음 단계
-
-- [ ] 2016·2017년 자료를 합쳐 3개년 통합 분석 (진단자 약 300명 예상)
-- [ ] 치료 여부(`DM3_pt`)와 CRP 대치값에 대한 민감도 분석
-- [ ] 층·집락을 반영한 복합표본 로지스틱 회귀
-- [ ] **파트 B**: 2표본 멘델리안 무작위분석으로 흡연·BMI → 류마티스관절염의 인과 효과 검증, 류마티스관절염·루푸스 소인 → 알츠하이머병 탐색
-
-## 7. 실행 방법
-
-```text
-.
-├── partA_knhanes_ra.ipynb   # 분석 노트북
-├── README.md
-└── (hn18_all.sas7bdat)      # 직접 내려받아 같은 폴더에 두기, 저장소에는 미포함
-```
-
-1. 국민건강영양조사 누리집에서 `hn18_all.sas7bdat`를 내려받아 노트북과 같은 폴더에 둡니다. `hn16_all`과 `hn17_all`도 같은 폴더에 두면 자동으로 합쳐집니다.
-2. Google Colab에서 노트북을 열고 첫 셀에서 패키지를 설치합니다.
-   ```bash
-   pip install lightgbm shap statsmodels
-   ```
-3. 위에서부터 순서대로 실행합니다.
 
 **주요 라이브러리**: pandas, scipy, statsmodels, scikit-learn, LightGBM, SHAP, matplotlib
 
